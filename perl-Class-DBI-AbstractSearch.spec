@@ -1,5 +1,6 @@
 #
 # Conditional build:
+%bcond_without	autodeps	# don't BR packages needed only for resolving deps
 %bcond_without	tests		# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
@@ -8,7 +9,7 @@
 Summary:	Class::DBI::AbstractSearch - Abstract Class::DBI's SQL with SQL::Abstract::Limit
 Name:		perl-Class-DBI-AbstractSearch
 Version:	0.07
-Release:	0.1
+Release:	0.2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -16,7 +17,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 # Source0-md5:	d40e7301201135fe0246251097132a54
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-%if %{with tests}
+%if %{with autodeps} || %{with tests}
 BuildRequires:	perl(Class::DBI) >= 0.9
 BuildRequires:	perl(SQL::Abstract::Limit) >= 0.1
 BuildRequires:	perl(Test::More) >= 0.32
