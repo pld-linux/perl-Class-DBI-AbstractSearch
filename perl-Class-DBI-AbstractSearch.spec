@@ -9,7 +9,7 @@
 Summary:	Class::DBI::AbstractSearch - Abstract Class::DBI's SQL with SQL::Abstract::Limit
 Name:		perl-Class-DBI-AbstractSearch
 Version:	0.07
-Release:	0.2
+Release:	0.4
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -22,6 +22,8 @@ BuildRequires:	perl(Class::DBI) >= 0.9
 BuildRequires:	perl(SQL::Abstract::Limit) >= 0.1
 BuildRequires:	perl(Test::More) >= 0.32
 %endif
+# not autodetected
+Requires:	perl-Class-DBI
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
