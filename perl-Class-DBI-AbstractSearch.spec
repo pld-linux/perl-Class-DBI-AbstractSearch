@@ -10,7 +10,7 @@ Summary:	Class::DBI::AbstractSearch - Abstract Class::DBI's SQL with SQL::Abstra
 Summary(pl.UTF-8):	Class::DBI::AbstractSearch - abstrakcja SQL Class::DBI z SQL::Abstract::Limit
 Name:		perl-Class-DBI-AbstractSearch
 Version:	0.07
-Release:	0.4
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
