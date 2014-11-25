@@ -2,10 +2,10 @@
 # Conditional build:
 %bcond_without	autodeps	# don't BR packages needed only for resolving deps
 %bcond_without	tests		# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define	pdir	Class
 %define	pnam	DBI-AbstractSearch
+%include	/usr/lib/rpm/macros.perl
 Summary:	Class::DBI::AbstractSearch - Abstract Class::DBI's SQL with SQL::Abstract::Limit
 Summary(pl.UTF-8):	Class::DBI::AbstractSearch - abstrakcja SQL Class::DBI z SQL::Abstract::Limit
 Name:		perl-Class-DBI-AbstractSearch
@@ -16,6 +16,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	d40e7301201135fe0246251097132a54
+URL:		http://search.cpan.org/dist/Class-DBI-AbstractSearch/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with autodeps} || %{with tests}
